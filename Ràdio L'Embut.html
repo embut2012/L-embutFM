@@ -1,0 +1,947 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ràdio L'Embut</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: capçalera blava marina amb el logotip, franja verd d'aigua amb l'eslògan, portada amb bloc corall "en directe",
+   i després graella, notícies, podcasts, sintonies i manual d'identitat. Colors i forma de l'embut surten del logotip. */
+:root {
+  --navy: #0C1522;
+  --cream: #F9F0E0;
+  --teal: #20BCB6;
+  --coral: #F25055;
+  --teal-deep: #0C706C;
+  --coral-deep: #C93338;
+  --bg: #FBF7EF;
+  --surface: #FFFFFF;
+  --ink: #0C1522;
+  --muted: #566070;
+  --line: #E7DDCB;
+  --accent: #C93338;
+  --tint: #F5EBD8;
+  --deep: #0C1522;
+  --deep-ink: #F9F0E0;
+  --deep-muted: #9FA9B6;
+  --font-display: "Montserrat", "Arial Black", Arial, sans-serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --logo: url("data:image/png;base64,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");
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0C1522; --surface: #142033; --ink: #F9F0E0; --muted: #A5AFBC; --line: #26364D;
+    --accent: #F25055; --tint: #1B2A40; --deep: #070D16; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0C1522; --surface: #142033; --ink: #F9F0E0; --muted: #A5AFBC; --line: #26364D;
+  --accent: #F25055; --tint: #1B2A40; --deep: #070D16; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 110px;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--navy); }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.wrap { max-width: 1160px; margin-inline: auto; }
+.bleed { margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px))); padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: .98; font-weight: 900; text-transform: uppercase; overflow-wrap: anywhere; }
+p { margin: 0; }
+h4.eyebrow { font-weight: 500; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* Logotip: tot surt de la imatge original */
+.logo-full, .logo-icon { background-image: var(--logo); background-repeat: no-repeat; display: block; flex: none; }
+.logo-full { aspect-ratio: 169 / 120; background-size: 100% 100%; }
+.logo-icon { aspect-ratio: 64 / 86; background-size: 264.06% auto; background-position: 7.62% 47.06%; }
+.lock { display: inline-flex; align-items: center; gap: calc(var(--H) * .2); text-decoration: none; }
+.lock .logo-icon { height: var(--H); }
+.lock .t { display: flex; flex-direction: column; gap: calc(var(--H) * .1); }
+.lock small { font-family: var(--font-mono); font-size: calc(var(--H) * .17); letter-spacing: .3em; text-transform: uppercase; color: var(--teal); line-height: 1; margin-left: .15em; }
+.wm { font-family: var(--font-display); font-weight: 900; font-size: calc(var(--H) * 1.14); line-height: .78; letter-spacing: .005em; color: var(--cream); text-transform: uppercase; white-space: nowrap; display: block; }
+.wm b { color: var(--teal); font-weight: 900; }
+.lock.v { flex-direction: column; gap: calc(var(--H) * .22); }
+.lock.v .t { align-items: center; }
+.lock.v small { margin-left: 0; }
+.lock.light .wm { color: var(--navy); }
+.lock.light .wm b { color: var(--teal-deep); }
+.lock.light small { color: var(--teal-deep); }
+
+/* Capçalera */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--navy); border-bottom: 1px solid rgba(249,240,224,.14); }
+.top .wrap { display: flex; align-items: center; gap: 10px 28px; flex-wrap: wrap; padding-block: 10px; }
+.top nav { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; max-width: 100%; }
+.top nav a { text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px 11px; white-space: nowrap; border-bottom: 3px solid transparent; color: var(--cream); }
+.top nav a:hover { border-color: var(--teal); }
+@media (max-width: 860px) { .top nav { margin-left: 0; width: 100%; } }
+
+.strip { background: var(--teal); color: var(--navy); }
+.strip .wrap { display: flex; flex-wrap: wrap; gap: 3px 22px; padding-block: 7px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+.strip .wrap span { white-space: nowrap; }
+.strip .wrap .sl { font-weight: 700; white-space: normal; }
+
+/* Portada */
+.hero { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 20px; padding-block: 28px; }
+@media (max-width: 880px) { .hero { grid-template-columns: minmax(0, 1fr); } }
+.live { position: relative; overflow: hidden; background: var(--coral); color: var(--navy); padding: 28px; min-height: 360px; display: flex; flex-direction: column; justify-content: flex-end; gap: 14px; }
+.live .deco { position: absolute; right: -50px; top: -30px; width: 340px; height: 340px; opacity: .14; pointer-events: none; }
+.badge { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--navy); color: var(--cream); font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: .1em; padding: 5px 10px; position: relative; }
+.badge i { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .25; } }
+.live h1 { font-size: clamp(32px, 6.2vw, 68px); position: relative; }
+.live p { max-width: 46ch; font-size: 18px; position: relative; }
+.live .hosts { font-family: var(--font-mono); font-size: 13px; letter-spacing: .04em; position: relative; }
+.prog { height: 6px; background: rgba(12,21,34,.25); position: relative; }
+.prog i { position: absolute; inset: 0 auto 0 0; background: var(--navy); width: 0; }
+.prog-meta { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; margin-top: 6px; }
+.cta { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; border: 0; background: var(--navy); color: var(--cream); font-weight: 700; font-size: 16px; padding: 13px 20px 13px 16px; position: relative; }
+.cta:hover { background: #1A2A44; }
+.cta svg { width: 20px; height: 20px; }
+
+.next { background: var(--surface); border: 1px solid var(--line); padding: 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.next h2 { font-size: 22px; }
+.next ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.next li { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 12px; padding-block: 13px; border-top: 1px solid var(--line); }
+.next li time { font-family: var(--font-mono); font-size: 15px; font-weight: 500; color: var(--accent); }
+.next li b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 15px; line-height: 1.15; text-transform: uppercase; }
+.next li span { font-size: 14px; color: var(--muted); }
+
+/* Seccions */
+section { padding-block: 38px; border-top: 3px solid var(--ink); }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 20px; }
+.sec-head h2 { font-size: clamp(28px, 5vw, 46px); }
+.lede { max-width: 66ch; color: var(--muted); margin-bottom: 22px; font-size: 17px; }
+
+/* Parrilla */
+.tabs { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+.tab { border: 1px solid var(--line); background: var(--surface); padding: 8px 14px; font-weight: 600; font-size: 14px; }
+.tab[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.grid-sched { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; gap: 8px 18px; align-items: center; padding: 15px 18px; border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row time { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--muted); }
+.row b { font-family: var(--font-display); font-weight: 800; font-size: 18px; text-transform: uppercase; line-height: 1.1; display: block; overflow-wrap: anywhere; }
+.row span.d { font-size: 14px; color: var(--muted); }
+.row .tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; background: var(--coral); color: var(--navy); padding: 4px 8px; font-weight: 500; }
+.row.on { background: var(--tint); box-shadow: inset 5px 0 0 var(--coral); }
+.row.on time { color: var(--accent); }
+@media (max-width: 560px) { .row { grid-template-columns: minmax(0, 1fr) auto; } .row time { grid-column: 1 / -1; } }
+
+/* Notícies */
+.news { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 20px; }
+.card { display: flex; flex-direction: column; gap: 10px; text-decoration: none; min-width: 0; }
+.card .pic { aspect-ratio: 16 / 10; max-width: 100%; position: relative; overflow: hidden; }
+.card .pic svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.card .cat { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.card h3 { font-weight: 800; font-size: 17px; line-height: 1.12; }
+.card:hover h3 { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 3px; text-decoration-color: var(--coral); }
+.card p { font-size: 14px; color: var(--muted); }
+.card.lead { grid-column: span 2; grid-row: span 2; }
+.card.lead h3 { font-size: clamp(24px, 3.2vw, 36px); font-weight: 900; line-height: 1; }
+.card.lead p { font-size: 17px; }
+@media (max-width: 900px) { .news { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .news { grid-template-columns: minmax(0, 1fr); } .card.lead { grid-column: auto; grid-row: auto; } }
+
+/* Podcasts */
+.pods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .pods { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .pods { grid-template-columns: minmax(0, 1fr); } }
+.pod { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 14px; background: var(--surface); border: 1px solid var(--line); padding: 14px; align-items: center; }
+.pod button.pl { width: 76px; height: 76px; border: 0; background: var(--navy); color: var(--cream); display: grid; place-items: center; }
+.pod button.pl:hover { background: var(--teal); color: var(--navy); }
+.pod.on button.pl { background: var(--coral); color: var(--navy); }
+.pod button.pl svg { width: 28px; height: 28px; }
+.pod b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 14px; line-height: 1.15; text-transform: uppercase; }
+.pod span { font-size: 13px; color: var(--muted); display: block; margin-top: 4px; }
+.pod .dur { font-family: var(--font-mono); font-size: 12px; }
+
+/* Sintonies */
+.jingles { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.jing { background: var(--navy); color: var(--cream); padding: 20px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.jing .hd { display: flex; align-items: center; gap: 14px; }
+.jing button { width: 54px; height: 54px; flex: none; border: 0; border-radius: 50%; background: var(--teal); color: var(--navy); display: grid; place-items: center; }
+.jing button:hover { background: var(--coral); }
+.jing button svg { width: 22px; height: 22px; }
+.jing h3 { font-size: 17px; line-height: 1.05; }
+.jing .meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: .04em; color: var(--deep-muted); }
+.jing p { font-size: 14px; color: #D9D2C4; }
+.jing .bar { height: 4px; background: rgba(249,240,224,.18); }
+.jing .bar i { display: block; height: 100%; width: 0; background: var(--teal); }
+.jing.on .bar i { background: var(--coral); }
+
+/* Identitat */
+.sub { padding-block: 30px 6px; border-top: 1px solid var(--line); margin-top: 26px; }
+.sub:first-of-type { margin-top: 0; }
+.sub-h { display: flex; align-items: baseline; gap: 12px; font-size: clamp(20px, 3vw, 28px); margin-bottom: 8px; }
+.sub-h span { font-family: var(--font-mono); font-size: 14px; color: var(--accent); font-weight: 500; }
+.note { font-size: 14px; color: var(--muted); max-width: 70ch; margin-bottom: 18px; }
+.spec { font-family: var(--font-mono); font-size: 12px; letter-spacing: .03em; color: var(--muted); }
+
+.slogan-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px; }
+@media (max-width: 820px) { .slogan-grid { grid-template-columns: minmax(0, 1fr); } }
+.slogan { background: var(--navy); color: var(--cream); padding: clamp(22px, 4vw, 40px); display: flex; flex-direction: column; gap: 18px; justify-content: space-between; min-height: 280px; overflow: hidden; position: relative; }
+.slogan h3 { font-size: clamp(28px, 5.4vw, 58px); line-height: .98; position: relative; }
+.slogan h3 em { font-style: normal; color: var(--teal); }
+.slogan h3 u { text-decoration: none; color: var(--coral); }
+.slogan .fn { position: absolute; right: -40px; bottom: -40px; width: 260px; height: 300px; background: var(--cream); opacity: .06; clip-path: polygon(0 0, 100% 0, 100% 34%, 60% 72%, 60% 100%, 40% 100%, 40% 72%, 0 34%); }
+.slist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); }
+.slist li { padding: 14px 18px; border-top: 1px solid var(--line); display: grid; gap: 3px; }
+.slist li:first-child { border-top: 0; }
+.slist b { font-family: var(--font-display); font-weight: 800; font-size: 15px; text-transform: uppercase; line-height: 1.15; }
+
+.logos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.lg { color: var(--navy); padding: 20px; display: flex; flex-direction: column; gap: 14px; justify-content: space-between; min-width: 0; border: 1px solid var(--line); }
+.lg .stage { display: grid; place-items: center; min-height: 130px; overflow: hidden; }
+.lg .cap { font-family: var(--font-mono); font-size: 12px; letter-spacing: .03em; }
+.lg.navy { background: var(--navy); color: var(--cream); border-color: var(--navy); }
+.lg.cream { background: var(--cream); color: var(--navy); border-color: var(--cream); }
+.lg.coral { background: var(--coral); color: var(--navy); border-color: var(--coral); }
+.lg.teal { background: var(--teal); color: var(--navy); border-color: var(--teal); }
+.lg.s2 { grid-column: span 2; } .lg.s3 { grid-column: span 3; } .lg.s4 { grid-column: span 4; } .lg.s6 { grid-column: span 6; }
+@media (max-width: 900px) { .lg.s2, .lg.s3, .lg.s4 { grid-column: span 3; } }
+@media (max-width: 560px) { .lg.s2, .lg.s3, .lg.s4, .lg.s6 { grid-column: span 6; } }
+.mono-g { filter: grayscale(1); } .mono-i { filter: grayscale(1) invert(1); }
+.iso-row { display: flex; align-items: flex-end; gap: 18px; flex-wrap: wrap; justify-content: center; }
+.iso-row .logo-icon { background-color: var(--navy); }
+.iso-row .sq { height: 64px; } .iso-row .rd { height: 64px; border-radius: 999px; background-size: 185% auto; background-position: -8% 45%; aspect-ratio: 1; }
+.iso-row .m { height: 32px; } .iso-row .xs { height: 16px; }
+
+.clearbox { position: relative; display: inline-block; padding: calc(var(--H) * .4); outline: 1px dashed var(--teal); outline-offset: -1px; }
+.clearbox::before, .clearbox::after { content: "x"; position: absolute; font-family: var(--font-mono); font-size: 11px; color: var(--teal); }
+.clearbox::before { left: 50%; top: 2px; transform: translateX(-50%); }
+.clearbox::after { top: 50%; left: 4px; transform: translateY(-50%); }
+.sizes { display: flex; align-items: flex-end; gap: 28px; flex-wrap: wrap; }
+.sizes figure { margin: 0; display: grid; gap: 8px; justify-items: start; }
+.sizes figcaption { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+
+.sw-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .sw-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .sw-grid { grid-template-columns: minmax(0, 1fr); } }
+.sw { border: 1px solid var(--line); background: var(--surface); display: flex; flex-direction: column; min-width: 0; }
+.sw .c { height: 128px; padding: 14px; display: flex; align-items: flex-end; font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: 20px; line-height: 1; }
+.sw dl { margin: 0; padding: 12px 14px; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-family: var(--font-mono); font-size: 12px; }
+.sw dt { color: var(--muted); } .sw dd { margin: 0; overflow-wrap: anywhere; }
+.copy { border: 1px solid var(--line); background: transparent; padding: 3px 8px; font-family: var(--font-mono); font-size: 12px; margin: 0 14px 14px; align-self: flex-start; color: var(--ink); }
+.copy:hover { border-color: var(--teal); }
+.sw.small .c { height: 72px; font-size: 14px; }
+.ratio { display: flex; height: 44px; margin: 22px 0 6px; border: 1px solid var(--line); }
+.ratio i { display: flex; align-items: center; padding-inline: 10px; font-family: var(--font-mono); font-size: 12px; font-style: normal; font-weight: 500; overflow: hidden; white-space: nowrap; }
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); margin-top: 16px; }
+table.ct { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
+table.ct th, table.ct td { text-align: left; padding: 10px 14px; border-top: 1px solid var(--line); }
+table.ct thead th { border-top: 0; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+table.ct td.n { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.chip { display: inline-grid; place-items: center; width: 54px; height: 32px; font-family: var(--font-display); font-weight: 900; border: 1px solid rgba(128,128,128,.25); }
+.ok { color: var(--teal-deep); font-weight: 700; } .no { color: var(--coral-deep); font-weight: 700; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ok { color: var(--teal); } :root:not([data-theme="light"]) .no { color: var(--coral); } }
+:root[data-theme="dark"] .ok { color: var(--teal); } :root[data-theme="dark"] .no { color: var(--coral); }
+
+.fonts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 900px) { .fonts { grid-template-columns: minmax(0, 1fr); } }
+.fcard { background: var(--surface); border: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.fcard .aa { font-size: 88px; line-height: .9; }
+.fcard h3 { font-size: 16px; font-family: var(--font-body); text-transform: none; font-weight: 700; }
+.fcard .role { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.scale { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); }
+.sc { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 6px 20px; align-items: baseline; padding: 14px 18px; border-top: 1px solid var(--line); }
+.sc:first-child { border-top: 0; }
+.sc .k { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.sc .s { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 560px) { .sc { grid-template-columns: minmax(0, 1fr); } }
+
+.grid12 { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px; height: 90px; padding: 10px; background: var(--surface); border: 1px solid var(--line); }
+.grid12 i { background: color-mix(in srgb, var(--teal) 28%, transparent); border-left: 1px solid var(--teal); border-right: 1px solid var(--teal); }
+@media (max-width: 560px) { .grid12 { grid-template-columns: repeat(4, minmax(0, 1fr)); } .grid12 i:nth-child(n+5) { display: none; } }
+.spacing { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+.spacing figure { margin: 0; display: grid; gap: 6px; justify-items: start; }
+.spacing i { display: block; background: var(--coral); height: 20px; }
+.spacing figcaption { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.mocks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; margin-top: 18px; }
+@media (max-width: 860px) { .mocks { grid-template-columns: minmax(0, 1fr); max-width: 420px; } }
+.mockw { display: grid; gap: 8px; min-width: 0; }
+.mock { position: relative; container-type: inline-size; overflow: hidden; width: 100%; }
+.mock.poster { aspect-ratio: 3 / 4; background: var(--navy); }
+.mock.square { aspect-ratio: 1; background: var(--teal); color: var(--navy); display: grid; place-items: center; align-content: center; gap: 4cqw; text-align: center; }
+.mock.banner { aspect-ratio: 16 / 9; background: var(--navy); color: var(--cream); display: flex; flex-direction: column; justify-content: center; gap: 4cqw; padding-inline: 8cqw; }
+.mock .funnel { position: absolute; left: 8%; right: 8%; top: 6%; height: 62%; background: var(--coral); clip-path: polygon(0 0, 100% 0, 100% 34%, 60% 72%, 60% 100%, 40% 100%, 40% 72%, 0 34%); }
+.mock .p1 { position: absolute; left: 12%; right: 12%; top: 11%; text-align: center; font-family: var(--font-display); font-weight: 900; font-size: 13.5cqw; line-height: .98; color: var(--navy); text-transform: uppercase; }
+.mock .p2 { position: absolute; left: 8%; right: 8%; top: 72%; text-align: center; font-family: var(--font-display); font-weight: 900; font-size: 9cqw; line-height: 1; color: var(--teal); text-transform: uppercase; }
+.mock .pf { position: absolute; left: 0; right: 0; bottom: 4%; display: flex; justify-content: center; }
+.mock.square .logo-icon { height: 44cqw; border-radius: 6cqw; background-color: var(--navy); }
+.mock.square b { font-family: var(--font-display); font-weight: 900; font-size: 8cqw; text-transform: uppercase; }
+.mock.square span { font-family: var(--font-mono); font-size: 4cqw; letter-spacing: .06em; text-transform: uppercase; }
+.mock.banner .sl2 { font-family: var(--font-display); font-weight: 800; font-size: 4.2cqw; text-transform: uppercase; color: var(--cream); }
+.mock.banner .stripes { position: absolute; left: 0; right: 0; bottom: 0; height: 3cqw; display: flex; }
+.mock.banner .stripes i { flex: 1; }
+.donts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .donts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.dn { display: grid; gap: 8px; min-width: 0; }
+.dn .st { background: var(--tint); display: grid; place-items: center; height: 120px; overflow: hidden; }
+.dn .st .logo-full { width: 110px; }
+.dn .l { font-size: 13px; }
+.dn .l b { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; }
+.dn.good .l b { color: var(--teal-deep); } .dn.bad .l b { color: var(--coral-deep); }
+
+/* Peu */
+footer { background: var(--deep); color: var(--deep-ink); margin-top: 30px; }
+footer .wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 28px; padding-block: 38px; }
+@media (max-width: 720px) { footer .wrap { grid-template-columns: minmax(0, 1fr); } }
+footer h3 { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--deep-muted); margin-bottom: 10px; font-weight: 500; }
+footer li { margin: 0; font-size: 15px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+footer .small { color: var(--deep-muted); font-size: 13px; margin-top: 14px; max-width: 52ch; }
+footer .fs { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: 20px; line-height: 1.05; margin-top: 16px; color: var(--cream); }
+footer .fs em { font-style: normal; color: var(--teal); } footer .fs u { text-decoration: none; color: var(--coral); }
+
+/* Reproductor */
+.player { position: fixed; left: 0; right: 0; bottom: 0; z-index: 25; background: var(--navy); color: var(--cream); border-top: 3px solid var(--coral); padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.player .wrap { display: flex; align-items: center; gap: 14px; }
+.pp { width: 54px; height: 54px; flex: none; border: 0; border-radius: 50%; background: var(--coral); color: var(--navy); display: grid; place-items: center; }
+.pp:hover { background: var(--teal); }
+.pp svg { width: 24px; height: 24px; }
+.pmeta { min-width: 0; flex: 1; }
+.pmeta .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; color: var(--deep-muted); text-transform: uppercase; }
+.pmeta b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 16px; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pbar { height: 4px; background: rgba(249,240,224,.2); margin-top: 6px; display: none; }
+.pbar i { display: block; height: 100%; width: 0; background: var(--teal); }
+.player.pod .pbar { display: block; }
+.eq { display: flex; align-items: flex-end; gap: 3px; height: 28px; }
+.eq i { width: 4px; background: var(--teal); height: 6px; }
+.player.on .eq i { animation: eq .9s ease-in-out infinite; }
+.player.on .eq i:nth-child(2) { animation-delay: -.3s; } .player.on .eq i:nth-child(3) { animation-delay: -.6s; }
+.player.on .eq i:nth-child(4) { animation-delay: -.15s; } .player.on .eq i:nth-child(5) { animation-delay: -.45s; }
+@keyframes eq { 0%, 100% { height: 5px; } 50% { height: 28px; } }
+.vol { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; color: var(--deep-muted); }
+.vol input { width: 110px; accent-color: var(--teal); }
+@media (max-width: 640px) { .vol { display: none; } }
+@media (prefers-reduced-motion: reduce) { .badge i, .player.on .eq i { animation: none; } .player.on .eq i { height: 18px; } }
+</style>
+
+<header class="top bleed">
+  <div class="wrap">
+    <a class="lock" style="--H:36px" href="#inici" aria-label="Ràdio L'Embut, inici">
+      <span class="logo-icon" role="img" aria-label="Icona de l'embut amb micròfon"></span>
+      <span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span>
+    </a>
+    <nav aria-label="Navegació principal">
+      <a href="#directe">En directe</a>
+      <a href="#programacio">Programació</a>
+      <a href="#noticies">Notícies</a>
+      <a href="#podcasts">Podcasts</a>
+      <a href="#sintonies">Sintonies</a>
+      <a href="#identitat">Identitat</a>
+    </nav>
+  </div>
+</header>
+<div class="strip bleed"><div class="wrap"><span class="sl">On les coses entren i no surten</span><span id="datestr"></span><span>FM 98.7</span><span>DAB+ · App · Web</span></div></div>
+
+<main class="wrap" id="inici">
+  <div class="hero" id="directe">
+    <div class="live">
+      <svg class="deco" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 6h30L23 21v13h-6V21z" fill="#0C1522"/></svg>
+      <span class="badge"><i></i>EN DIRECTE</span>
+      <h1 id="nowTitle">L'Embut</h1>
+      <p id="nowDesc"></p>
+      <div class="hosts" id="nowHosts"></div>
+      <div>
+        <div class="prog" aria-hidden="true"><i id="nowBar"></i></div>
+        <div class="prog-meta"><span id="nowStart"></span><span id="nowEnd"></span></div>
+      </div>
+      <button class="cta" id="liveBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg>
+        <span id="liveBtnTxt">Escolta en directe</span>
+      </button>
+    </div>
+    <aside class="next" aria-labelledby="nextH">
+      <h2 id="nextH">A continuació</h2>
+      <ol id="nextList"></ol>
+    </aside>
+  </div>
+
+  <section id="programacio">
+    <div class="sec-head"><h2>Programació</h2><span class="eyebrow" id="schedLabel"></span></div>
+    <div class="tabs" role="group" aria-label="Dia de la programació">
+      <button class="tab" type="button" data-k="week" aria-pressed="true">Dilluns a divendres</button>
+      <button class="tab" type="button" data-k="wknd" aria-pressed="false">Cap de setmana</button>
+    </div>
+    <div class="grid-sched" id="sched"></div>
+  </section>
+
+  <section id="noticies">
+    <div class="sec-head"><h2>Última hora</h2><span class="eyebrow">Actualitzat a les <span id="upd"></span></span></div>
+    <div class="news" id="news"></div>
+  </section>
+
+  <section id="podcasts">
+    <div class="sec-head"><h2>Podcasts</h2><span class="eyebrow">Escolta quan vulguis</span></div>
+    <div class="pods" id="pods"></div>
+  </section>
+
+  <section id="sintonies">
+    <div class="sec-head"><h2>Sintonies</h2><span class="eyebrow">5 peces · sintetitzades al navegador</span></div>
+    <p class="lede">La sonoritat de l'emissora segueix l'eslògan: tot entra per l'ample, giravolta cap avall i s'acaba de cop. Cap sintonia té cua. Prem per escoltar-les; sonen amb el volum del teu dispositiu.</p>
+    <div class="jingles" id="jingles"></div>
+  </section>
+
+  <section id="identitat">
+    <div class="sec-head"><h2>Imatge corporativa</h2><span class="eyebrow">Manual d'identitat · versió 1.0</span></div>
+
+    <div class="sub">
+      <h3 class="sub-h"><span>1</span>Eslògan</h3>
+      <p class="note">L'eslògan descriu el funcionament de l'embut i és la promesa de to de l'emissora: informació, converses i anècdotes hi entren amb ganes; la discreció és la nostra forma de tancar el cercle.</p>
+      <div class="slogan-grid">
+        <div class="slogan">
+          <span class="fn" aria-hidden="true"></span>
+          <span class="eyebrow" style="color:var(--deep-muted);position:relative">Eslògan principal</span>
+          <h3>On les coses <em>entren</em> i <u>no surten</u>.</h3>
+          <span class="spec" style="color:var(--deep-muted);position:relative">Montserrat Black · majúscules · "entren" en verd d'aigua, "no surten" en corall</span>
+        </div>
+        <ul class="slist">
+          <li><b>Tot hi cap. Gairebé res en surt.</b><span class="spec">Campanya de captació d'oients</span></li>
+          <li><b>Ample per entrar. Estret per sortir.</b><span class="spec">Cartells i ràdio exterior</span></li>
+          <li><b>Parla'ns. Aquí es queda.</b><span class="spec">Programes de trucades i correu</span></li>
+          <li><b>Escolta fins al fons.</b><span class="spec">Podcasts i xarxes</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3 class="sub-h"><span>2</span>Logotips</h3>
+      <p class="note">El logotip principal és la peça enviada: embut amb micròfon i ones, més el monograma L'E amb l'apòstrof en crema i la E en verd d'aigua. La resta de versions es deriven d'aquesta sense redibuixar-la.</p>
+      <div class="logos">
+        <div class="lg navy s2"><div class="stage"><span class="logo-full" role="img" aria-label="Logotip principal" style="width:min(100%,220px)"></span></div><span class="cap">A · Principal · icona + monograma</span></div>
+        <div class="lg navy s4"><div class="stage"><span class="lock" style="--H:clamp(26px,4.6vw,66px)"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span></span></div><span class="cap">B · Horitzontal complet · versió per defecte sobre fons fosc</span></div>
+        <div class="lg cream s3"><div class="stage"><span class="lock v light" style="--H:clamp(40px,7vw,70px)"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span></span></div><span class="cap">C · Vertical · sobre crema (la E passa a verd d'aigua fosc)</span></div>
+        <div class="lg coral s3"><div class="stage"><span class="lock light" style="--H:clamp(28px,5.4vw,56px)"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small style="color:var(--navy)">Ràdio</small><span class="wm" style="color:var(--navy)">L'<b style="color:var(--cream)">E</b>MBUT</span></span></span></div><span class="cap">D · Sobre corall · paraula en blau marí, E en crema</span></div>
+        <div class="lg cream s2"><div class="stage"><span class="logo-full mono-g" role="img" aria-label="Logotip en escala de grisos" style="width:min(100%,150px)"></span></div><span class="cap">E · Monocrom, escala de grisos</span></div>
+        <div class="lg cream s2"><div class="stage"><span class="logo-full mono-i" role="img" aria-label="Logotip en negatiu" style="width:min(100%,150px)"></span></div><span class="cap">F · Negatiu, inversió de tons</span></div>
+        <div class="lg teal s2"><div class="stage"><div class="iso-row"><span class="logo-icon sq" role="img" aria-label="Icona quadrada"></span><span class="logo-icon rd" role="img" aria-label="Icona circular"></span><span class="logo-icon m" role="img" aria-label="Icona petita"></span><span class="logo-icon xs" role="img" aria-label="Icona mínima"></span></div></div><span class="cap">G · Isotip sol · avatar quadrat, cercle, 32 i 16 px</span></div>
+      </div>
+
+      <h4 class="eyebrow" style="margin:26px 0 10px">Zona de seguretat i mides mínimes</h4>
+      <div class="logos">
+        <div class="lg navy s3"><div class="stage"><span class="clearbox" style="--H:clamp(28px,5vw,50px)"><span class="lock" style="--H:clamp(28px,5vw,50px)"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span></span></span></div><span class="cap">Marge lliure = x, la meitat de l'alçada de la L. Cap element hi pot entrar.</span></div>
+        <div class="lg cream s3"><div class="stage" style="place-items:end start;align-content:end"><div class="sizes">
+          <figure><span class="lock light" style="--H:48px"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span></span><figcaption>48 px · normal</figcaption></figure>
+          <figure><span class="lock light" style="--H:32px"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span></span><figcaption>32 px · web</figcaption></figure>
+          <figure><span class="lock light" style="--H:24px"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><span class="wm">L'<b>E</b>MBUT</span></span></span><figcaption>24 px · mínim</figcaption></figure>
+        </div></div><span class="cap">Mínim: 24 px d'alçada a pantalla i 8 mm en paper. Per sota, només l'isotip (mínim 16 px). Sota 32 px s'amaga la paraula "Ràdio".</span></div>
+      </div>
+
+      <h4 class="eyebrow" style="margin:26px 0 10px">Usos incorrectes</h4>
+      <div class="donts">
+        <div class="dn good"><div class="st"><span class="logo-full" role="img" aria-label="Logotip correcte"></span></div><span class="l"><b>CORRECTE</b><br>Proporcions i colors originals.</span></div>
+        <div class="dn bad"><div class="st"><span class="logo-full" role="img" aria-label="Logotip deformat" style="transform:scaleX(1.5)"></span></div><span class="l"><b>NO</b><br>Estirar o aixafar el logotip.</span></div>
+        <div class="dn bad"><div class="st"><span class="logo-full" role="img" aria-label="Logotip amb colors canviats" style="filter:hue-rotate(140deg) saturate(1.5)"></span></div><span class="l"><b>NO</b><br>Canviar els colors de la paleta.</span></div>
+        <div class="dn bad"><div class="st"><span class="logo-full" role="img" aria-label="Logotip girat" style="transform:rotate(-14deg)"></span></div><span class="l"><b>NO</b><br>Girar-lo o inclinar-lo.</span></div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3 class="sub-h"><span>3</span>Colors</h3>
+      <p class="note">Quatre colors extrets del logotip. El blau marí i la crema porten el pes; el corall marca el directe; el verd d'aigua marca l'àudio i els elements interactius. Valors CMYK orientatius, a validar amb la impremta.</p>
+      <div class="sw-grid" id="swatches"></div>
+      <div class="ratio" aria-label="Proporció d'ús dels colors">
+        <i style="flex:40;background:var(--navy);color:var(--cream)">Blau marí 40%</i>
+        <i style="flex:32;background:var(--cream);color:var(--navy)">Crema 32%</i>
+        <i style="flex:16;background:var(--coral);color:var(--navy)">Corall 16%</i>
+        <i style="flex:12;background:var(--teal);color:var(--navy)">Verd 12%</i>
+      </div>
+      <p class="spec">Proporció d'ús en peces gràfiques</p>
+      <h4 class="eyebrow" style="margin:24px 0 10px">Colors de suport per a text petit sobre fons clar</h4>
+      <div class="sw-grid" id="swatches2"></div>
+      <div class="tbl-wrap"><table class="ct"><thead><tr><th>Mostra</th><th>Combinació</th><th>Contrast</th><th>Ús</th></tr></thead><tbody id="contrast"></tbody></table></div>
+    </div>
+
+    <div class="sub">
+      <h3 class="sub-h"><span>4</span>Tipografia</h3>
+      <p class="note">Tres veus. Montserrat Black és la lletra del logotip i dels titulars, sempre en majúscules. Public Sans porta el text llarg. IBM Plex Mono marca hores, freqüències i dades.</p>
+      <div class="fonts">
+        <div class="fcard"><span class="role">Titulars i logotip</span><div class="aa" style="font-family:var(--font-display);font-weight:900">Aa</div><h3>Montserrat</h3><p class="spec">Black 900 · ExtraBold 800 · majúscules · interlineat 0,95–1</p><p style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:20px;line-height:1">On les coses entren</p></div>
+        <div class="fcard"><span class="role">Text</span><div class="aa" style="font-family:var(--font-body);font-weight:600">Aa</div><h3>Public Sans</h3><p class="spec">Regular 400 · Medium 500 · SemiBold 600 · Bold 700 · interlineat 1,5</p><p>La redacció revisa cada notícia abans que entri a l'antena i no la deixa sortir sense contrastar.</p></div>
+        <div class="fcard"><span class="role">Dades i horaris</span><div class="aa" style="font-family:var(--font-mono);font-weight:500">Aa</div><h3>IBM Plex Mono</h3><p class="spec">Medium 500 · majúscules amb 8% d'espaiat</p><p style="font-family:var(--font-mono);font-size:15px">FM 98.7 · 06:00 – 10:00</p></div>
+      </div>
+      <div class="scale">
+        <div class="sc"><span class="k">H1 · 68–72 / 0,98<br>Montserrat 900</span><span class="s" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(30px,6vw,68px);line-height:.98">El matí</span></div>
+        <div class="sc"><span class="k">H2 · 46 / 1<br>Montserrat 900</span><span class="s" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(26px,4.5vw,46px);line-height:1">Programació</span></div>
+        <div class="sc"><span class="k">H3 · 28 / 1,05<br>Montserrat 800</span><span class="s" style="font-family:var(--font-display);font-weight:800;text-transform:uppercase;font-size:28px;line-height:1.05">Última hora</span></div>
+        <div class="sc"><span class="k">Entradeta · 18 / 1,5<br>Public Sans 400</span><span class="s" style="font-size:18px">Els embassaments tornen a pujar després d'una setmana de pluges.</span></div>
+        <div class="sc"><span class="k">Text · 16 / 1,55<br>Public Sans 400</span><span class="s">El text llarg va a 16 píxels, amb línies d'entre 55 i 70 caràcters per llegir amb comoditat.</span></div>
+        <div class="sc"><span class="k">Etiqueta · 12 / 1<br>Plex Mono 500</span><span class="s spec" style="text-transform:uppercase;letter-spacing:.08em">Societat · 12:03</span></div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3 class="sub-h"><span>5</span>Composició</h3>
+      <p class="note">Graella de 12 columnes amb 20 px de separació i ample màxim de 1160 px. Els blocs es munten amb blau marí i crema, i un sol accent per peça. El recurs gràfic és la silueta de l'embut: ample a dalt, estreta a baix.</p>
+      <div class="grid12" aria-label="Graella de 12 columnes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="spec" style="margin-top:8px">12 columnes · separació 20 · marges 16 (mòbil) i 24 (escriptori) · base de 8 px</p>
+      <div class="spacing" aria-label="Escala d'espaiats">
+        <figure><i style="width:4px"></i><figcaption>4</figcaption></figure>
+        <figure><i style="width:8px"></i><figcaption>8</figcaption></figure>
+        <figure><i style="width:16px"></i><figcaption>16</figcaption></figure>
+        <figure><i style="width:24px"></i><figcaption>24</figcaption></figure>
+        <figure><i style="width:32px"></i><figcaption>32</figcaption></figure>
+        <figure><i style="width:48px"></i><figcaption>48</figcaption></figure>
+        <figure><i style="width:64px"></i><figcaption>64</figcaption></figure>
+      </div>
+      <div class="mocks">
+        <div class="mockw"><div class="mock poster">
+          <div class="funnel"></div>
+          <p class="p1">On les<br>coses<br>entren</p>
+          <p class="p2">I no<br>surten</p>
+          <div class="pf"><span class="lock" style="--H:6.2cqw"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><span class="wm">L'<b>E</b>MBUT</span></span></span></div>
+        </div><span class="spec">Cartell vertical 3:4 · l'eslògan dibuixa l'embut</span></div>
+        <div class="mockw"><div class="mock square">
+          <span class="logo-icon" role="img" aria-label="Icona"></span>
+          <b>Ràdio L'Embut</b>
+          <span>FM 98.7 · On les coses entren</span>
+        </div><span class="spec">Xarxes 1:1 · fons verd d'aigua, icona centrada</span></div>
+        <div class="mockw"><div class="mock banner">
+          <span class="lock" style="--H:12cqw"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span></span>
+          <span class="sl2">On les coses entren i no surten</span>
+          <span class="stripes" aria-hidden="true"><i style="background:var(--coral)"></i><i style="background:var(--teal)"></i><i style="background:var(--cream)"></i></span>
+        </div><span class="spec">Capçalera 16:9 · logotip a l'esquerra, eslògan sota</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bleed">
+  <div class="wrap">
+    <div>
+      <span class="lock" style="--H:40px"><span class="logo-icon" role="img" aria-label="Icona"></span><span class="t"><small>Ràdio</small><span class="wm">L'<b>E</b>MBUT</span></span></span>
+      <p class="fs">On les coses <em>entren</em><br>i <u>no surten</u>.</p>
+      <p class="small">Web d'exemple amb contingut fictici. Programes, titulars i podcasts són inventats. El reproductor simula l'emissió; per sentir una emissora real cal connectar-hi l'adreça del seu streaming.</p>
+    </div>
+    <div>
+      <h3>Redacció</h3>
+      <ul><li>redaccio@radiolembut.example</li><li>93 000 00 00</li><li>Carrer de l'Embut, 12 · Barcelona</li></ul>
+    </div>
+    <div>
+      <h3>Escolta'ns</h3>
+      <ul><li>FM 98.7</li><li>DAB+</li><li>Web i aplicació</li></ul>
+    </div>
+  </div>
+</footer>
+
+<div class="player" id="player" role="region" aria-label="Reproductor">
+  <div class="wrap">
+    <button class="pp" id="pp" type="button" aria-label="Reprodueix">
+      <svg viewBox="0 0 24 24" id="ppIcon" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="currentColor"/></svg>
+    </button>
+    <div class="pmeta">
+      <div class="k" id="pk">En directe</div>
+      <b id="pt">L'Embut</b>
+      <div class="pbar"><i id="pbar"></i></div>
+    </div>
+    <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <label class="vol" for="vol">VOL <input id="vol" type="range" min="0" max="100" value="70"></label>
+  </div>
+</div>
+
+<script>
+(function () {
+  var PLAY = '<path d="M7 4.5v15l13-7.5z" fill="currentColor"/>';
+  var PAUSE = '<path d="M6 4h4.5v16H6zM13.5 4H18v16h-4.5z" fill="currentColor"/>';
+  var STOP = '<path d="M6 6h12v12H6z" fill="currentColor"/>';
+
+  var WEEK = [
+    { s: 0, e: 2, t: "La Nit Sense Filtre", d: "Converses llargues i música fins de matinada.", h: "Amb l'Arnau i la Neus", lab: "00:00 – 02:00" },
+    { s: 2, e: 6, t: "Música Embotellada", d: "Quatre hores de música sense interrupcions.", h: "Selecció de l'Embut", lab: "02:00 – 06:00" },
+    { s: 6, e: 10, t: "El Matí de l'Embut", d: "Notícies, tertúlia i la primera crònica del dia.", h: "Amb la Marta i el Jordi", lab: "06:00 – 10:00" },
+    { s: 10, e: 13, t: "La Mitja Part", d: "Magazín amb entrevistes, cultura i actualitat.", h: "Amb la Carme", lab: "10:00 – 13:00" },
+    { s: 13, e: 14, t: "L'Embut al Migdia", d: "El butlletí informatiu més complet del dia.", h: "Redacció", lab: "13:00 – 14:00" },
+    { s: 14, e: 16, t: "Sobretaula", d: "Humor, anècdotes i vida de barri després de dinar.", h: "Amb en Pau i la Laia", lab: "14:00 – 16:00" },
+    { s: 16, e: 19, t: "Les Tardes", d: "Reportatges, consultori i tot el que ha passat avui.", h: "Amb la Núria", lab: "16:00 – 19:00" },
+    { s: 19, e: 21, t: "Esport a Granel", d: "Resultats, anàlisi i debat esportiu.", h: "Amb l'Oriol i el Biel", lab: "19:00 – 21:00" },
+    { s: 21, e: 23, t: "Entre Dos Vols", d: "Música en directe i converses tranquil·les.", h: "Amb l'Èlia", lab: "21:00 – 23:00" },
+    { s: 23, e: 24, t: "La Nit Sense Filtre", d: "Converses llargues i música fins de matinada.", h: "Amb l'Arnau i la Neus", lab: "23:00 – 02:00" }
+  ];
+  var WKND = [
+    { s: 0, e: 7, t: "Música Embotellada", d: "Música contínua per a les hores petites.", h: "Selecció de l'Embut", lab: "00:00 – 07:00" },
+    { s: 7, e: 10, t: "Cap de Setmana Embotellat", d: "Un matí tranquil amb actualitat i bon humor.", h: "Amb el Roger", lab: "07:00 – 10:00" },
+    { s: 10, e: 13, t: "El Diari del Cap de Setmana", d: "Resum de la setmana i entrevistes llargues.", h: "Amb la Carme", lab: "10:00 – 13:00" },
+    { s: 13, e: 14, t: "L'Embut al Migdia", d: "El butlletí informatiu més complet del dia.", h: "Redacció", lab: "13:00 – 14:00" },
+    { s: 14, e: 17, t: "Sobretaula de Festa", d: "Tertúlia distesa i trucades dels oients.", h: "Amb en Pau i la Laia", lab: "14:00 – 17:00" },
+    { s: 17, e: 20, t: "Esport a Granel", d: "Totes les cròniques i la jornada en directe.", h: "Amb l'Oriol i el Biel", lab: "17:00 – 20:00" },
+    { s: 20, e: 23, t: "Entre Dos Vols", d: "Música en directe i converses tranquil·les.", h: "Amb l'Èlia", lab: "20:00 – 23:00" },
+    { s: 23, e: 24, t: "Música Embotellada", d: "Música contínua per a les hores petites.", h: "Selecció de l'Embut", lab: "23:00 – 07:00" }
+  ];
+  var NEWS = [
+    { c: "Societat", t: "Les pluges d'aquesta setmana deixen els embassaments al nivell més alt de l'any", p: "Els experts avisen que la tendència pot canviar en poques setmanes si no es repeteixen els temporals de tardor.", lead: true, k: 0 },
+    { c: "Mobilitat", t: "Canvis a les línies d'autobús nocturn a partir de dilluns", p: "Tres recorreguts s'allarguen fins a l'hospital.", k: 1 },
+    { c: "Cultura", t: "El festival de tardor estrena una sala de concerts a la vora del riu", p: "Obre amb vuit dies de programació gratuïta.", k: 2 },
+    { c: "Esport", t: "L'equip local tanca la lliga d'octubre amb una golejada fora de casa", p: "El partit es va decidir abans del descans.", k: 3 },
+    { c: "Economia", t: "Els preus del mercat de pagès baixen per primer cop en sis mesos", p: "La castanya i la carabassa lideren la caiguda.", k: 4 }
+  ];
+  var PODS = [
+    { t: "La Mitja Part, completa", s: "Entrevista del dia amb tertúlia", d: 48 },
+    { t: "Sobretaula: el millor de la setmana", s: "Els moments més celebrats", d: 36 },
+    { t: "Esport a Granel: l'anàlisi", s: "Tàctica, fitxatges i polèmica", d: 52 },
+    { t: "Històries de la Nit", s: "Converses de matinada", d: 41 },
+    { t: "El Matí en 10 minuts", s: "Resum exprés de les notícies", d: 10 },
+    { t: "Entre Dos Vols en acústic", s: "Sessió en directe a l'estudi", d: 33 }
+  ];
+  var MONTHS = ["de gener", "de febrer", "de març", "d'abril", "de maig", "de juny", "de juliol", "d'agost", "de setembre", "d'octubre", "de novembre", "de desembre"];
+  var DAYS = ["Diumenge", "Dilluns", "Dimarts", "Dimecres", "Dijous", "Divendres", "Dissabte"];
+
+  function $(id) { return document.getElementById(id); }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function hh(h) { return pad(h % 24) + ":00"; }
+
+  var now = new Date();
+  var weekend = now.getDay() === 0 || now.getDay() === 6;
+  $("datestr").textContent = DAYS[now.getDay()] + ", " + now.getDate() + " " + MONTHS[now.getMonth()] + " " + now.getFullYear();
+  $("upd").textContent = pad(now.getHours()) + ":" + pad(now.getMinutes());
+
+  function slotIndex(list, h) { for (var i = 0; i < list.length; i++) if (h >= list[i].s && h < list[i].e) return i; return 0; }
+  var list = weekend ? WKND : WEEK;
+  var hNow = now.getHours() + now.getMinutes() / 60;
+  var idx = slotIndex(list, hNow);
+  var cur = list[idx];
+
+  $("nowTitle").textContent = cur.t;
+  $("nowDesc").textContent = cur.d;
+  $("nowHosts").textContent = cur.h;
+  $("nowStart").textContent = hh(cur.s);
+  $("nowEnd").textContent = hh(cur.e);
+  $("nowBar").style.width = Math.max(2, Math.min(100, (hNow - cur.s) / (cur.e - cur.s) * 100)) + "%";
+  $("pt").textContent = cur.t;
+
+  var nx = $("nextList");
+  for (var j = 1; j <= 3; j++) {
+    var it = list[(idx + j) % list.length];
+    var li = document.createElement("li");
+    li.innerHTML = "<time>" + hh(it.s) + "</time><div><b></b><span></span></div>";
+    li.querySelector("b").textContent = it.t;
+    li.querySelector("span").textContent = it.d;
+    nx.appendChild(li);
+  }
+
+  function renderSched(k) {
+    var l = k === "week" ? WEEK : WKND;
+    var todayKind = weekend ? "wknd" : "week";
+    var ci = slotIndex(l, hNow);
+    var box = $("sched");
+    box.innerHTML = "";
+    l.forEach(function (it, i) {
+      var r = document.createElement("div");
+      var on = k === todayKind && i === ci;
+      r.className = "row" + (on ? " on" : "");
+      r.innerHTML = "<time></time><div><b></b><span class='d'></span></div>" + (on ? "<span class='tag'>ARA</span>" : "");
+      r.querySelector("time").textContent = it.lab;
+      r.querySelector("b").textContent = it.t;
+      r.querySelector(".d").textContent = it.d + " " + it.h + ".";
+      box.appendChild(r);
+    });
+    $("schedLabel").textContent = k === todayKind ? "Avui, " + DAYS[now.getDay()].toLowerCase() : "Programació habitual";
+  }
+  renderSched(weekend ? "wknd" : "week");
+  document.querySelectorAll(".tab").forEach(function (b) {
+    b.setAttribute("aria-pressed", String(b.dataset.k === (weekend ? "wknd" : "week")));
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".tab").forEach(function (o) { o.setAttribute("aria-pressed", String(o === b)); });
+      renderSched(b.dataset.k);
+    });
+  });
+
+  var PATS = [["#0C1522", "#20BCB6"], ["#F25055", "#0C1522"], ["#20BCB6", "#0C1522"], ["#F9F0E0", "#F25055"], ["#142033", "#F9F0E0"]];
+  var nw = $("news");
+  NEWS.forEach(function (n) {
+    var a = document.createElement("a");
+    a.className = "card" + (n.lead ? " lead" : "");
+    a.href = "#noticies";
+    var p = PATS[n.k % PATS.length];
+    var ang = (n.k * 17) % 40;
+    a.innerHTML =
+      "<div class='pic'><svg viewBox='0 0 160 100' preserveAspectRatio='xMidYMid slice' aria-hidden='true'>" +
+      "<rect width='160' height='100' fill='" + p[0] + "'/>" +
+      "<g transform='rotate(" + ang + " 80 50)' fill='" + p[1] + "'><path d='M45 18h70L89 52v30H71V52z'/></g>" +
+      "<g fill='none' stroke='" + p[1] + "' stroke-width='2' opacity='.5'><circle cx='130' cy='22' r='10'/><circle cx='130' cy='22' r='18'/><circle cx='130' cy='22' r='26'/></g>" +
+      "</svg></div><span class='cat'></span><h3></h3><p></p>";
+    a.querySelector(".cat").textContent = n.c;
+    a.querySelector("h3").textContent = n.t;
+    a.querySelector("p").textContent = n.p;
+    nw.appendChild(a);
+  });
+
+  var pods = $("pods");
+  PODS.forEach(function (p, i) {
+    var d = document.createElement("div");
+    d.className = "pod";
+    d.innerHTML = "<button class='pl' type='button'><svg viewBox='0 0 24 24' aria-hidden='true'>" + PLAY + "</svg></button><div><b></b><span class='s'></span><span class='dur'></span></div>";
+    d.querySelector("b").textContent = p.t;
+    d.querySelector(".s").textContent = p.s;
+    d.querySelector(".dur").textContent = p.d + " min";
+    d.querySelector("button").setAttribute("aria-label", "Reprodueix " + p.t);
+    d.querySelector("button").addEventListener("click", function () { choosePod(i); });
+    pods.appendChild(d);
+  });
+
+  /* ---------- Sintonies: síntesi amb Web Audio ---------- */
+  var AC = window.AudioContext || window.webkitAudioContext;
+  var J = { r: null, id: null, timer: 0, raf: 0, t0: 0 };
+
+  function mkRig(ctx) {
+    var out = ctx.createGain(); out.gain.value = 0.85;
+    var comp = ctx.createDynamicsCompressor();
+    out.connect(comp); comp.connect(ctx.destination);
+    var n = ctx.sampleRate * 2, buf = ctx.createBuffer(1, n, ctx.sampleRate), d = buf.getChannelData(0);
+    for (var i = 0; i < n; i++) d[i] = Math.random() * 2 - 1;
+    return { ctx: ctx, out: out, nb: buf };
+  }
+  function envl(g, t, a, d, v) {
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(v, t + a);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + d);
+  }
+  function tone(r, t, d, f, type, v, o) {
+    o = o || {};
+    var c = r.ctx, os = c.createOscillator(), g = c.createGain();
+    os.type = type || "sine";
+    os.frequency.setValueAtTime(f, t);
+    if (o.to) os.frequency.exponentialRampToValueAtTime(o.to, t + d);
+    if (o.lp) { var fl = c.createBiquadFilter(); fl.type = "lowpass"; fl.frequency.value = o.lp; os.connect(fl); fl.connect(g); }
+    else os.connect(g);
+    envl(g, t, Math.min(o.a || 0.01, d * 0.5), d, v);
+    g.connect(r.out);
+    os.start(t); os.stop(t + d + 0.05);
+  }
+  function noise(r, t, d, f0, f1, v, type, q) {
+    var c = r.ctx, s = c.createBufferSource(), fl = c.createBiquadFilter(), g = c.createGain();
+    s.buffer = r.nb; s.loop = true;
+    fl.type = type || "bandpass"; fl.Q.value = q || 1;
+    fl.frequency.setValueAtTime(f0, t);
+    if (f1 !== f0) fl.frequency.exponentialRampToValueAtTime(f1, t + d);
+    s.connect(fl); fl.connect(g); g.connect(r.out);
+    envl(g, t, Math.min(d * 0.6, 0.4), d, v);
+    s.start(t); s.stop(t + d + 0.05);
+  }
+  function plop(r, t, v) { tone(r, t, 0.16, 720, "sine", v || 0.7, { to: 80, a: 0.005 }); noise(r, t, 0.05, 2500, 2500, 0.12, "highpass"); }
+  function kick(r, t) { tone(r, t, 0.2, 150, "sine", 0.95, { to: 42, a: 0.003 }); }
+  function hat(r, t) { noise(r, t, 0.05, 8000, 8000, 0.12, "highpass"); }
+
+  var JINGLES = [
+    { id: "main", name: "Sintonia principal", dur: 5.9, meta: "5,9 s · Do major · 3 veus", desc: "Una remolinada puja a l'embut, el motiu de quatre notes diu L'Em-bu-t i la sintonia baixa girant fins a un glop. Després, silenci: no en surt res.",
+      fn: function (r) {
+        noise(r, 0, 1.4, 300, 3200, 0.22, "bandpass", 1.2);
+        [523.25, 659.25, 783.99, 1046.5, 1318.5].forEach(function (f, i) { tone(r, 1.4 + i * 0.16, 0.38, f, "triangle", 0.2); });
+        [261.63, 392, 523.25, 659.25].forEach(function (f) { tone(r, 2.3, 1.5, f, "triangle", 0.1, { a: 0.05 }); });
+        tone(r, 2.3, 1.5, 130.81, "sine", 0.35, { a: 0.02 });
+        [[783.99, 2.4, 0.3], [659.25, 2.65, 0.3], [783.99, 2.9, 0.3], [1046.5, 3.15, 0.75]].forEach(function (n) {
+          tone(r, n[1], n[2], n[0], "sine", 0.28); tone(r, n[1], n[2], n[0] * 2, "sine", 0.07);
+        });
+        tone(r, 3.95, 1.6, 2093, "triangle", 0.18, { to: 170, a: 0.05 });
+        noise(r, 3.95, 1.6, 3600, 220, 0.25, "bandpass", 2);
+        plop(r, 5.55);
+      } },
+    { id: "ident", name: "Identificador", dur: 2.0, meta: "2 s · Do major · talls de programa", desc: "Tres notes ascendents, una engolida i un glop. És el so que entra entre cançons i programes, i també quan prems «Escolta en directe».",
+      fn: function (r) {
+        [[783.99, 0, 0.22], [1046.5, 0.13, 0.22], [1318.5, 0.26, 0.55]].forEach(function (n) { tone(r, n[1], n[2], n[0], "triangle", 0.22); });
+        noise(r, 0.7, 1.0, 2400, 200, 0.22, "bandpass", 1.6);
+        tone(r, 0.7, 1.0, 1568, "sine", 0.12, { to: 120 });
+        plop(r, 1.75);
+      } },
+    { id: "news", name: "Informatiu", dur: 6.0, meta: "6 s · 120 bpm · La menor", desc: "Tres pítols, baix en moviment i un acord de corda. Acaba amb dues notes seques i el glop final.",
+      fn: function (r) {
+        for (var i = 0; i < 3; i++) tone(r, i * 0.22, 0.12, 1760, "square", 0.1, { lp: 4000 });
+        var bass = [110, 130.81, 164.81, 220, 164.81, 130.81];
+        for (var k = 0; k < 16; k++) { tone(r, 0.9 + k * 0.25, 0.22, bass[k % 6], "sawtooth", 0.16, { lp: 900 }); if (k % 2 === 0) noise(r, 0.9 + k * 0.25, 0.05, 6000, 6000, 0.06, "highpass"); }
+        [220, 261.63, 329.63].forEach(function (f) { tone(r, 1.0, 3.9, f, "triangle", 0.08, { a: 0.3 }); });
+        tone(r, 5.0, 0.5, 659.25, "triangle", 0.2); tone(r, 5.12, 0.5, 880, "triangle", 0.2);
+        plop(r, 5.7);
+      } },
+    { id: "sport", name: "Esport a Granel", dur: 5.6, meta: "5,6 s · 128 bpm · Mi menor", desc: "Bombo a negra, bateria de hi-hat i un riff de ona quadrada. Un cop de platerets abans de la tancada.",
+      fn: function (r) {
+        var beat = 60 / 128, bass = [82.41, 82.41, 98, 110];
+        for (var b = 0; b < 10; b++) {
+          kick(r, b * beat); hat(r, b * beat + beat / 2);
+          tone(r, b * beat, 0.38, bass[b % 4], "sawtooth", 0.2, { lp: 600 });
+        }
+        var lead = [329.63, 392, 440, 392, 329.63, 293.66, 329.63, 392];
+        for (var e = 0; e < 16; e++) tone(r, 2 * beat + e * beat / 2, 0.2, lead[e % 8], "square", 0.09, { lp: 2500 });
+        noise(r, 4.7, 0.8, 3000, 9000, 0.22, "highpass");
+        [329.63, 392, 493.88].forEach(function (f) { tone(r, 4.7, 0.55, f, "sawtooth", 0.1, { lp: 3000 }); });
+        plop(r, 5.4);
+      } },
+    { id: "night", name: "La Nit Sense Filtre", dur: 8.3, meta: "8,3 s · Re menor · lenta", desc: "Un acord llarg, quatre notes de vibràfon espaiades i una remolinada lenta cap avall. La més tranquil·la del repertori.",
+      fn: function (r) {
+        [146.83, 220, 261.63, 329.63, 349.23].forEach(function (f) { tone(r, 0, 5.8, f, "sine", 0.09, { a: 1.5 }); });
+        [[440, 2.0], [349.23, 3.4], [329.63, 4.8], [293.66, 6.0]].forEach(function (n) { tone(r, n[1], 1.5, n[0], "sine", 0.18); tone(r, n[1], 1.2, n[0] * 2, "sine", 0.05); });
+        tone(r, 6.3, 1.7, 880, "triangle", 0.1, { to: 90, a: 0.1 });
+        noise(r, 6.3, 1.7, 1500, 120, 0.12, "bandpass", 1.5);
+        plop(r, 8.0, 0.55);
+      } }
+  ];
+
+  var jbox = $("jingles");
+  JINGLES.forEach(function (j) {
+    var c = document.createElement("div");
+    c.className = "jing"; c.id = "j-" + j.id;
+    c.innerHTML = "<div class='hd'><button type='button'><svg viewBox='0 0 24 24' aria-hidden='true'>" + PLAY + "</svg></button><div><h3></h3><div class='meta'></div></div></div><p></p><div class='bar'><i></i></div>";
+    c.querySelector("h3").textContent = j.name;
+    c.querySelector(".meta").textContent = j.meta;
+    c.querySelector("p").textContent = j.desc;
+    c.querySelector("button").setAttribute("aria-label", "Escolta " + j.name);
+    c.querySelector("button").addEventListener("click", function () { if (J.id === j.id) stopJ(); else playJ(j.id); });
+    jbox.appendChild(c);
+  });
+
+  function paintJ() {
+    JINGLES.forEach(function (j) {
+      var el = $("j-" + j.id), on = J.id === j.id;
+      el.classList.toggle("on", on);
+      el.querySelector("svg").innerHTML = on ? STOP : PLAY;
+      el.querySelector("button").setAttribute("aria-label", (on ? "Atura " : "Escolta ") + j.name);
+      if (!on) el.querySelector(".bar i").style.width = "0";
+    });
+  }
+  function stopJ() {
+    clearTimeout(J.timer); cancelAnimationFrame(J.raf);
+    if (J.r) { try { var cp = J.r.ctx.close(); if (cp && cp.catch) cp.catch(function () {}); } catch (e) {} }
+    J.r = null; J.id = null; paintJ();
+  }
+  function playJ(id) {
+    if (!AC) return;
+    stopJ();
+    var j = JINGLES.filter(function (x) { return x.id === id; })[0];
+    try {
+      var ctx = new AC();
+      if (ctx.state === "suspended" && ctx.resume) ctx.resume();
+      var r = mkRig(ctx);
+      j.fn(r);
+      J.r = r; J.id = id; J.t0 = ctx.currentTime;
+      J.timer = setTimeout(stopJ, (j.dur + 0.25) * 1000);
+      var fill = $("j-" + id).querySelector(".bar i");
+      (function loop() {
+        if (J.id !== id || !J.r) return;
+        fill.style.width = Math.min(100, (J.r.ctx.currentTime - J.t0) / j.dur * 100) + "%";
+        J.raf = requestAnimationFrame(loop);
+      })();
+      paintJ();
+    } catch (e) { J.r = null; J.id = null; paintJ(); }
+  }
+
+  /* ---------- Reproductor (simulat) ---------- */
+  var st = { mode: "live", playing: false, pod: -1, prog: 0 };
+  var timer = null;
+  var player = $("player");
+  function paint() {
+    player.classList.toggle("on", st.playing);
+    player.classList.toggle("pod", st.mode === "pod");
+    $("ppIcon").innerHTML = st.playing ? PAUSE : PLAY;
+    $("pp").setAttribute("aria-label", st.playing ? "Pausa" : "Reprodueix");
+    $("liveBtnTxt").textContent = st.mode === "live" && st.playing ? "Pausa" : "Escolta en directe";
+    $("pk").textContent = st.mode === "live" ? "En directe · FM 98.7" : "Podcast";
+    $("pt").textContent = st.mode === "live" ? cur.t : PODS[st.pod].t;
+    $("pbar").style.width = st.prog + "%";
+    document.querySelectorAll(".pod").forEach(function (el, i) {
+      var on = st.mode === "pod" && st.pod === i && st.playing;
+      el.classList.toggle("on", on);
+      el.querySelector("svg").innerHTML = on ? PAUSE : PLAY;
+    });
+    $("liveBtn").querySelector("svg").innerHTML = st.mode === "live" && st.playing ? PAUSE : PLAY;
+  }
+  function tick() {
+    clearInterval(timer);
+    if (st.playing && st.mode === "pod") {
+      timer = setInterval(function () {
+        st.prog = Math.min(100, st.prog + 100 / (PODS[st.pod].d * 6));
+        if (st.prog >= 100) { st.playing = false; clearInterval(timer); }
+        paint();
+      }, 1000);
+    }
+  }
+  function toggle() { st.playing = !st.playing; paint(); tick(); if (st.playing && st.mode === "live") playJ("ident"); }
+  function choosePod(i) {
+    if (st.mode === "pod" && st.pod === i) { toggle(); return; }
+    st = { mode: "pod", playing: true, pod: i, prog: 0 };
+    paint(); tick();
+  }
+  function goLive() {
+    if (st.mode === "live") { toggle(); return; }
+    st = { mode: "live", playing: true, pod: -1, prog: 0 };
+    paint(); tick(); playJ("ident");
+  }
+  $("pp").addEventListener("click", toggle);
+  $("liveBtn").addEventListener("click", goLive);
+  paint();
+
+  /* ---------- Identitat: colors i contrast ---------- */
+  var COLORS = [
+    { n: "Blau marí", h: "#0C1522", rgb: "12 · 21 · 34", cmyk: "65 · 38 · 0 · 87", fg: "#F9F0E0", use: "Fons, text" },
+    { n: "Crema", h: "#F9F0E0", rgb: "249 · 240 · 224", cmyk: "0 · 4 · 10 · 2", fg: "#0C1522", use: "Fons clar, lletra" },
+    { n: "Verd d'aigua", h: "#20BCB6", rgb: "32 · 188 · 182", cmyk: "83 · 0 · 3 · 26", fg: "#0C1522", use: "Àudio, enllaços" },
+    { n: "Corall", h: "#F25055", rgb: "242 · 80 · 85", cmyk: "0 · 67 · 65 · 5", fg: "#0C1522", use: "Directe, alertes" }
+  ];
+  var SUPPORT = [
+    { n: "Verd d'aigua fosc", h: "#0C706C", rgb: "12 · 112 · 108", cmyk: "89 · 0 · 4 · 56", fg: "#F9F0E0", use: "Text sobre clar" },
+    { n: "Corall fosc", h: "#C93338", rgb: "201 · 51 · 56", cmyk: "0 · 75 · 72 · 21", fg: "#F9F0E0", use: "Text sobre clar" },
+    { n: "Crema suau", h: "#FBF7EF", rgb: "251 · 247 · 239", cmyk: "0 · 2 · 5 · 2", fg: "#0C1522", use: "Fons de pàgina" },
+    { n: "Blau de panell", h: "#142033", rgb: "20 · 32 · 51", cmyk: "61 · 37 · 0 · 80", fg: "#F9F0E0", use: "Targetes fosques" }
+  ];
+  function copyText(t, el) {
+    var lab = el.getAttribute("data-label") || el.textContent;
+    el.setAttribute("data-label", lab);
+    function done(ok) { el.textContent = ok ? "Copiat" : "Selecciona i copia"; setTimeout(function () { el.textContent = lab; }, 1300); }
+    try { navigator.clipboard.writeText(t).then(function () { done(true); }, function () { done(false); }); } catch (e) { done(false); }
+  }
+  function renderSw(id, arr, small) {
+    var box = $(id);
+    arr.forEach(function (c) {
+      var d = document.createElement("div");
+      d.className = "sw" + (small ? " small" : "");
+      d.innerHTML = "<div class='c'></div><dl><dt>HEX</dt><dd></dd><dt>RGB</dt><dd></dd><dt>CMYK</dt><dd></dd><dt>Ús</dt><dd></dd></dl><button class='copy' type='button'></button>";
+      var cc = d.querySelector(".c"); cc.style.background = c.h; cc.style.color = c.fg; cc.textContent = c.n;
+      var dd = d.querySelectorAll("dd");
+      dd[0].textContent = c.h; dd[1].textContent = c.rgb; dd[2].textContent = c.cmyk; dd[3].textContent = c.use;
+      var b = d.querySelector(".copy"); b.textContent = "Copia " + c.h;
+      b.addEventListener("click", function () { copyText(c.h, b); });
+      box.appendChild(d);
+    });
+  }
+  renderSw("swatches", COLORS, false);
+  renderSw("swatches2", SUPPORT, true);
+
+  function lum(h) {
+    var c = [1, 3, 5].map(function (i) { var v = parseInt(h.substr(i, 2), 16) / 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+  function cr(a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
+  var PAIRS = [
+    ["#0C1522", "#F9F0E0", "Blau marí sobre crema"],
+    ["#F9F0E0", "#0C1522", "Crema sobre blau marí"],
+    ["#0C1522", "#20BCB6", "Blau marí sobre verd d'aigua"],
+    ["#0C1522", "#F25055", "Blau marí sobre corall"],
+    ["#20BCB6", "#0C1522", "Verd d'aigua sobre blau marí"],
+    ["#F25055", "#0C1522", "Corall sobre blau marí"],
+    ["#0C706C", "#F9F0E0", "Verd d'aigua fosc sobre crema"],
+    ["#C93338", "#F9F0E0", "Corall fosc sobre crema"],
+    ["#20BCB6", "#F9F0E0", "Verd d'aigua sobre crema"],
+    ["#F9F0E0", "#F25055", "Crema sobre corall"]
+  ];
+  var tb = $("contrast");
+  PAIRS.forEach(function (p) {
+    var v = cr(p[0], p[1]);
+    var verdict = v >= 7 ? ["AAA · text i detalls", "ok"] : v >= 4.5 ? ["AA · text normal", "ok"] : v >= 3 ? ["Només text gran", "ok"] : ["No usar per a text", "no"];
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td><span class='chip'>Aa</span></td><td></td><td class='n'></td><td></td>";
+    var chip = tr.querySelector(".chip"); chip.style.color = p[0]; chip.style.background = p[1];
+    var tds = tr.querySelectorAll("td");
+    tds[1].textContent = p[2];
+    tds[2].textContent = v.toFixed(1) + " : 1";
+    tds[3].textContent = verdict[0]; tds[3].className = verdict[1];
+    tb.appendChild(tr);
+  });
+})();
+</script>
+
+</body></html>
